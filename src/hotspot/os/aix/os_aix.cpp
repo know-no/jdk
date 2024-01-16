@@ -1137,11 +1137,7 @@ static void* dll_load_library(const char *filename, char *ebuf, int ebuflen) {
   void* result;
   const char* error_report = nullptr;
   JFR_ONLY(NativeLibraryLoadEvent load_event(filename, &result);)
-<<<<<<< HEAD
-  result = Aix_dlopen(filename, dflags, ebuf, ebuflen);
-=======
   result = Aix_dlopen(filename, dflags, &error_report);
->>>>>>> 36f4b34f1953af736706ec67192204727808bc6c
   if (result != nullptr) {
     Events::log_dll_message(nullptr, "Loaded shared library %s", filename);
     // Reload dll cache. Don't do this in signal handling.
