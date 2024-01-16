@@ -918,7 +918,6 @@ static unsigned g_handletable_used = 0;
 // If this table is full we dynamically reallocate a memory reagion of double size, and so on.
 static struct handletableentry* p_handletable = nullptr;
 
-
 // get the library search path burned in to the executable file during linking
 // If the libpath cannot be retrieved return an empty path
 static const char* rtv_linkedin_libpath() {
