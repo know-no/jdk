@@ -911,7 +911,6 @@ struct handletableentry{
     dev64_t devid;
     uint    refcount;
 };
-
 constexpr unsigned init_num_handles = 128;
 static unsigned max_handletable = 0;
 static unsigned g_handletable_used = 0;
